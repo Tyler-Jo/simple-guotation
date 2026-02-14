@@ -12,8 +12,8 @@ from PIL import Image
 from reportlab.lib.utils import ImageReader
 
 # [1] 한글 폰트 설정
-FONT_PATH = "C:/Windows/Fonts/malgun.ttf" 
-FONT_NAME = "Malgun"
+FONT_PATH = "NanumGothic.ttf" 
+FONT_NAME = "NanumGothic"
 try:
     pdfmetrics.registerFont(TTFont(FONT_NAME, FONT_PATH))
 except:
