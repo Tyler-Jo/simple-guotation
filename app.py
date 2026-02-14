@@ -145,7 +145,19 @@ if "pdf_data" not in st.session_state:
     st.session_state.pdf_data = None
 
 with st.sidebar:
+    # [추가항목] 사용 방법 안내 팝오버
+    with st.popover("사용 방법 안내", icon="❓"):
+        st.markdown("""
+        ### 📑 견적서 작성 가이드
+        1. **설정**: 왼쪽 사이드바에서 작성할 **품목 수**를 조절하세요.
+        2. **도장**: 성명 옆에 찍을 **인감 도장(PNG/JPG)** 파일을 업로드하세요. (이름 우측에 자동 배치됩니다.)
+        3. **정보 입력**: 수신자 명, 발행일, 비고 사항을 입력하세요.
+        4. **품목 상세**: 각 품목의 이름, 수량, 단가를 입력하면 **금액이 자동 계산**됩니다.
+        5. **데이터 확정**: 하단의 **'🚀 견적서 생성 (데이터 확정)'** 버튼을 누르세요.
+        6. **다운로드**: 생성이 완료되면 나타나는 **'📥 완성된 PDF 다운로드'** 버튼을 클릭하세요.
+        """)
     st.header("⚙️ 설정")
+    num_items = st.number_input("품목 수", 1, 12, 5)
     num_items = st.number_input("품목 수", 1, 12, 5)
     user_stamp = st.file_uploader("도장 첨부 (PNG/JPG)", type=['png', 'jpg', 'jpeg'])
 
