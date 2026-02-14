@@ -158,7 +158,6 @@ with st.sidebar:
         """)
     st.header("⚙️ 설정")
     num_items = st.number_input("품목 수", 1, 12, 5)
-    num_items = st.number_input("품목 수", 1, 12, 5)
     user_stamp = st.file_uploader("도장 첨부 (PNG/JPG)", type=['png', 'jpg', 'jpeg'])
 
 with st.form("invoice_form"):
