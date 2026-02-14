@@ -1,0 +1,10 @@
+[project]
+name = "report-web"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "reportlab>=4.4.10",
+    "streamlit>=1.54.0",
+]
