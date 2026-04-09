@@ -1,0 +1,7 @@
+streamlit
+streamlit-webrtc
+av
+opencv-python-headless
+pytesseract
+deep-translator
+Pillow
